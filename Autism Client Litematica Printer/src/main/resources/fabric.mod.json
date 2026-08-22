@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "litematica-printer-addon",
+  "version": "${version}",
+  "name": "Litematica Printer Addon",
+  "description": "Litematica printer module for AUTISM Client",
+  "authors": [
+    "Devrim Yüksel"
+  ],
+  "custom": {
+    "autism:color": "80,220,120",
+    "modmenu": {
+      "parent": {
+        "id": "autism"
+      }
+    }
+  },
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.litematicaprinteraddon.addon.PrinterInit"
+    ],
+    "autism": [
+      "com.litematicaprinteraddon.addon.PrinterAddon"
+    ]
+  },
+  "depends": {
+    "java": ">=25",
+    "minecraft": "${mc_compat}",
+    "fabricloader": ">=0.19.3",
+    "fabric-api": ">=${fabric_api_version}",
+    "autism": ">=${autism_api_version}"
+  },
+  "suggests": {
+    "litematica": "*"
+  }
+}
